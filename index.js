@@ -11,7 +11,7 @@ server.use(cors())
 
 
 server.listen(port, ()=> {
-    console.log(`Server running on port ${port}`)
+    console.log(`\n** Server running on port ${port} in ${process.env.NODE_ENV} mode.\n`)
 })
 
 console.log("It's alive")

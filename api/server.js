@@ -1,7 +1,14 @@
-const express = require('express')
-const server = express()
+const express = require('express');
+const helmet = require('helmet');
+const morgan = require('morgan');
+const cors = require('cors');
+const server = express();
 
-server.use(express.json())
+server.use(express.json());
+server.use(helmet());
+server.use(morgan("dev"));
+server.use(cors());
+
 
 server.use("/api/*", (_,res)=>{
     res.json({message:'Hello from the server side!'})
