@@ -1,4 +1,4 @@
-Water MY Plant API
+Water MY Plants API
 
 Endpoints
 
