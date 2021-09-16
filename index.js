@@ -8,11 +8,7 @@ const port = process.env.PORT || 5000
 
 const secret = process.env
 server.use(cors())
-server.use(express.json())
 
-server.use("/api/*", (_,res)=>{
-    res.json({data:"The API is working!"})
-})
 
 server.listen(port, ()=> {
     console.log(`Server running on port ${port}`)
