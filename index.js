@@ -1,8 +1,9 @@
 const dotenv = require("dotenv").config()
 const express = require("express")
+const server = require('./api/server')
 const cors = require("cors")
 
-const server = express()
+
 const port = process.env.PORT || 5000
 
 const secret = process.env
