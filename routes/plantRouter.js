@@ -1,5 +1,4 @@
-const server = require('../api/server');
-
+//Chaining router to express
 const router = require('express').Router();
 
 router.get('/', (req,res) => {

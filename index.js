@@ -1,5 +1,5 @@
 const dotenv = require("dotenv").config()
-const express = require("express")
+//importing server from server.js
 const server = require('./api/server')
 const cors = require("cors")
 

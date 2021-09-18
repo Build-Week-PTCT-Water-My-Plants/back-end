@@ -7,9 +7,11 @@ const cors = require('cors');
 //Server created
 const server = express();
 
-//plantRouter import
+//plantRouter & authRouter import
 const plantRouter = require('../routes/plantRouter')
+const authRouter = require('../auth/authRouter')
 server.use('/plants',plantRouter);
+server.use('/auth', authRouter);
 
 server.use(express.json());
 server.use(helmet());
@@ -27,7 +29,6 @@ server.get('/status', (req,res)=>{
         message: `Server is up and running at ${currentTime}`
     })
 })
-
 
 
 module.exports = server
