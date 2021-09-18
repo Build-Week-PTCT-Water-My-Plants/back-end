@@ -10,8 +10,8 @@ const server = express();
 //plantRouter & authRouter import
 const plantRouter = require('../routes/plantRouter')
 const authRouter = require('../auth/authRouter')
-server.use('/plants',plantRouter);
-server.use('/auth', authRouter);
+server.use('/api/plants',plantRouter);
+server.use('/api/auth', authRouter);
 
 server.use(express.json());
 server.use(helmet());
