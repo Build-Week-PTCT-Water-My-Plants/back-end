@@ -8,7 +8,7 @@ const cors = require('cors');
 const server = express();
 
 //plantRouter & authRouter import
-const plantRouter = require('../routes/plantRouter')
+const plantRouter = require('../plants/plantRouter')
 const authRouter = require('../auth/authRouter')
 server.use('/api/plants',plantRouter);
 server.use('/api/auth', authRouter);
