@@ -7,7 +7,6 @@ const Plants = require('./plantModel');
 
 
 router.get('/', (req,res) => {
-    
     res.send("getting some plants")
 });
 
