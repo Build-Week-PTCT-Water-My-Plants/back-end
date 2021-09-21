@@ -19,7 +19,7 @@ server.use(morgan("dev"));
 server.use(cors());
 
 //Test endpoints
-server.use("/api/*", (_,res)=>{
+server.use("/api/", (_,res)=>{
     res.json({message:'Hello from the server side!'})
  })
 const currentTime = new Date().toLocaleTimeString();

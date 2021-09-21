@@ -1,15 +1,16 @@
 const router = require("express").Router();
 
-router.get('/', (req,res) => {
+router.get('/', (req,res, next) => {
     res.status(200).json({message: "hello user"})
+    next()
 })
 
 router.post("/register", (req, res) => {
     res.status(200).json({message:"Great to have you!"})
 })
- router.post('/login', (req,res, next) =>{
+
+ router.post('/login', (req,res) =>{
      res.status(200).json({message:"Welcome back!"})
-     next()
  })
 
  router.put('/user/:id', (req, res)=> {
