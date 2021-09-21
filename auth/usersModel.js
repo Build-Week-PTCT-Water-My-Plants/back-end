@@ -1,4 +1,4 @@
-//still needs a db to import
+//db to import goes here when completed
 //const db = require('../data/')
 
 module.exports = {

@@ -1,7 +1,13 @@
 //Chaining router to express
 const router = require('express').Router();
+const Plants = require('./plantModel');
+
+//db to import here when completed
+//const db = require('../data/')
+
 
 router.get('/', (req,res) => {
+    
     res.send("getting some plants")
 });
 
