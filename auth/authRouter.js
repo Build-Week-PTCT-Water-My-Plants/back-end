@@ -3,17 +3,19 @@ const jwt = require ('jsonwebtoken')
 const router = require("express").Router();
 const {jwtSecret} = require('../config/secret')
 const Users = require('./usersModel')
+const authPayload = require('./payload-middleware')
 
 router.get('/', (req,res, next) => {
     res.status(200).json({message: "hello user"})
     next()
 })
 
-router.post("/register", (req, res,next) => {
+router.post("/register", authPayload, (req, res,next) => {
     res.status(200).json({message:"Great to have you!"})
+    next()
 })
-
- router.post('/login', (req,res, next) =>{
+//authPayload should go after '/login'
+ router.post('/login', (req,res, next) =>{ 
 //     let { username, password } = req.body;
 
 //   Users.findBy({ username }) //usersModel incomplete without a db
